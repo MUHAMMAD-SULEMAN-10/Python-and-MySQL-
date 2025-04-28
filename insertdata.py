@@ -12,6 +12,11 @@ if conn.is_connected():
 
 #insertdata/records in the particular database/table of columns
 cur=conn.cursor()
+#single line insert datta
+#cur.execute("insert into db1.fsds values(123 , 'Muhammad', 'Suleman', '2022-11-11', 'sql', 'fsds')")
+
+#multilines data insert:
+
 cur.execute("""insert into db1.fsds values(123 , 'Muhammad', 'Suleman', '2022-11-11', 'sql', 'fsds'),
 (122 , 'Muhammad', 'Usman', '2022-11-25', 'MY_SQL', 'fsds'),
 (124 , 'Ali', 'Khan', '2022-11-12', 'Python', 'fsds'),
@@ -29,5 +34,5 @@ conn.commit()
 #this is going to return me some sorts of results
 cur.execute('select * from db1.fsds')
 
-for i in cur:
-    print(i) 
+# for i in cur:
+#     print(i) 
